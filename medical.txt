@@ -1,0 +1,17 @@
+CONFIDENTIAL PATIENT RECORD - DO NOT SHARE
+Hospital Admission Summary
+
+Patient Name: John Doe
+Date of Birth: 01/01/1980
+Patient ID / MRN: 999-123-456
+Health Insurance Claim Number (HICN): 123456789A
+
+Diagnosis (ICD-10):
+- E11.9: Type 2 diabetes mellitus without complications
+- I10: Essential (primary) hypertension
+
+Medications:
+- Metformin 500mg
+- Lisinopril 10mg
+
+Notes: Patient is being treated for chronic conditions.
