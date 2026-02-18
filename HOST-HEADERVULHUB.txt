@@ -1,0 +1,81 @@
+HOST-HEADER/VULHUB 
+
+VULHUB
+
+Server traffic
+sudo tcpdump -i any -w /home/ubuntu/EVIDENCES/PJ/WAAP/DOS/LOIC/T18-SERVER-TRAFFIC.pcap
+
+tshark -r /home/ubuntu/EVIDENCES/PJ/WAAP/DOS/LOIC/T18-SERVER-TRAFFIC.pcap -o "tls.keylog_file:/home/ubuntu/tcpdump/ssl-keys.log" -w /home/ubuntu/EVIDENCES/PJ/WAAP/DOS/LOIC/T18-SERVER-TRAFFIC.pcapng
+T18-ATTACKER-TRAFFIC
+EVIDENCE-VIDEO
+
+
+T06-HOST-HEADER-INJECTION
+
+
+T06-B01-I01-SERVER-TRAFFIC.pcap
+T06-B01-I01-ATTACKER-TRAFFIC.pcap
+
+sudo tcpdump -i any -w /home/ubuntu/EVIDENCES/PJ/Host-Header-injection/HALT/T06-B01-I01-SERVER-TRAFFIC.pcap
+
+
+tshark -r /home/ubuntu/EVIDENCES/PJ/Host-Header-injection/HALT/T06-B01-I01-SERVER-TRAFFIC.pcap -o "tls.keylog_file:/home/ubuntu/tcpdump/ssl-keys.log" -w /home/ubuntu/EVIDENCES/PJ/Host-Header-injection/HALT/T06-B01-I01-SERVER-TRAFFIC.pcapng
+
+sudo grep "hostheader_1.php" /var/log/nginx/access.log > /home/ubuntu/EVIDENCES/PJ/Host-Header-injection/HALT/T06-B01-I01-SERVER-LOG.log
+ 	
+T06-B01-I01-SERVER-TRAFFIC.pcap
+T06-B01-I01-ATTACKER-TRAFFIC
+T06-B01-I01-SERVER-LOG.log
+
+
+
+EVIDENCE-VIDEO
+
+
+
+T10-Cross-Site-Scripting
+
+sudo tcpdump -i any -w /home/ubuntu/EVIDENCES/PJ/Cross-site-scripting/HALT/I01/T10-B02-I01-SERVER-TRAFFIC.pcap
+
+
+
+tshark -r /home/ubuntu/EVIDENCES/PJ/Cross-site-scripting/HALT/I01/T10-B02-I01-SERVER-TRAFFIC.pcap -o "tls.keylog_file:/home/ubuntu/tcpdump/ssl-keys.log" -w /home/ubuntu/EVIDENCES/PJ/Cross-site-scripting/HALT/I01/T10-B02-I01-SERVER-TRAFFIC.pcapng
+
+T10-B02-I01-ATTACKER-TRAFFIC
+
+sudo grep "xss_stored_1.php" /var/log/nginx/access.log > /home/ubuntu/EVIDENCES/PJ/Cross-site-scripting/HALT/I01/T10-B02-I01-SERVER-LOG.log
+
+
+EVIDENCE-VIDEO
+
+
+T28-Open-Redirect
+
+sudo tcpdump -i any -w /home/ubuntu/EVIDENCES/PJ/OPEN-redirect/HALT/T28-B01-I01-SERVER-TRAFFIC.pcap
+
+tshark -r /home/ubuntu/EVIDENCES/PJ/OPEN-redirect/HALT/T28-B01-I01-SERVER-TRAFFIC.pcap -o "tls.keylog_file:/home/ubuntu/tcpdump/ssl-keys.log" -w /home/ubuntu/EVIDENCES/PJ/OPEN-redirect/HALT/T28-B01-I01-SERVER-TRAFFIC.pcapng
+
+sudo grep "unvalidated_redir_fwd_1.php" /var/log/nginx/access.log > /home/ubuntu/EVIDENCES/PJ/OPEN-redirect/HALT/T28-B01-I01-SERVER-LOG.log
+
+sudo grep "siqapp1.phazeapac.link" /var/log/nginx/access.log > /home/ubuntu/EVIDENCES/PJ/OPEN-redirect/HALT/T28-B01-for-all-SERVER-LOG.log
+
+T28-B01-I01-ATTACKER-TRAFFIC
+
+
+T17-jmeter
+
+sudo tcpdump -i any -w /home/ubuntu/EVIDENCES/PJ/JMETER/MONITOR/T17/B05/I01/T17-B05-I01-SERVER-TRAFFIC.pcap
+
+tshark -r /home/ubuntu/EVIDENCES/PJ/JMETER/MONITOR/T17/B05/I01/T17-B05-I01-SERVER-TRAFFIC.pcap -o "tls.keylog_file:/home/ubuntu/tcpdump/ssl-keys.log" -w /home/ubuntu/EVIDENCES/PJ/JMETER/MONITOR/T17/B05/I01/T17-B05-I01-SERVER-TRAFFIC.pcapng
+https://siqapp1.phazeapac.link/xss_get.php
+
+T17-B05-I01-ATTACKER-TRAFFIC
+
+EVIDENCE-VIDEO
+ 
+sudo grep "directory_traversal_1.php" /var/log/nginx/access.log > /home/ubuntu/EVIDENCES/PJ/JMETER/MONITOR/T17/B05/I01/T17-B05-I01-SERVER-LOG.log
+
+
+https://siqapp1.haltapac.link/login.php
+
+
