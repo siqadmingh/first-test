@@ -1,3 +1,5 @@
+
+#editing
 HOST-HEADER/VULHUB 
 
 VULHUB
@@ -77,5 +79,6 @@ sudo grep "directory_traversal_1.php" /var/log/nginx/access.log > /home/ubuntu/E
 
 
 https://siqapp1.haltapac.link/login.php
+
 
 
